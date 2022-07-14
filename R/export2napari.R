@@ -1,11 +1,11 @@
-#' Title
+#' Export data to Napari
 #'
 #' @title "Export data to Napari"
 #' @param objColl an arcosTS object with collective events.
 #' @param dirpath a string with the file name.
 #' @param ... parameters passed to (unused)
 #'
-#' @return
+#' @return writes files to a disk
 #' @import data.table
 #'
 #' @rdname export2napari

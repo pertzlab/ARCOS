@@ -17,10 +17,10 @@ export2napari(objColl, dirpath, ...)
 \item{...}{parameters passed to (unused)}
 }
 \value{
-
+writes files to a disk
 }
 \description{
-Title
+Export data to Napari
 }
 \examples{
 cat("no examples")

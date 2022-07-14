@@ -7,8 +7,9 @@
 \usage{
 savePlotColl2D(
   objTS,
-  objColl,
+  objColl = NULL,
   plotbin = FALSE,
+  datanno = NULL,
   outdir = ".",
   filecore = "",
   xlim = c(0, 1024),
@@ -20,13 +21,15 @@ savePlotColl2D(
   ptszbin = 1,
   ptszanno = 2,
   ggtheme = NULL,
-  imtype = c("png", "pdf")
+  imtype = c("png", "pdf"),
+  colpal = "RdYlBu"
 )
 
 \method{savePlotColl2D}{arcosTS}(
   objTS,
-  objColl,
+  objColl = NULL,
   plotbin = FALSE,
+  datanno = NULL,
   outdir = ".",
   filecore = "",
   xlim = c(0, 1024),
@@ -38,15 +41,18 @@ savePlotColl2D(
   ptszbin = 1,
   ptszanno = 2,
   ggtheme = NULL,
-  imtype = c("png", "pdf")
+  imtype = c("png", "pdf"),
+  colpal = "RdYlBu"
 )
 }
 \arguments{
 \item{objTS}{an arcosTS object with time series.}
 
-\item{objColl}{an arcosTS object with collective events.}
+\item{objColl}{an arcosTS object with collective events, defult NULL.}
 
 \item{plotbin}{a boolean, whether dots with binarised measurement should be plotted; default FALSE.}
+
+\item{datanno}{a data.table with T/X/Y annotations overlaid on the plot, default NULL.}
 
 \item{outdir}{a string with the dierctory to save the folder with frames; default ".".}
 
@@ -71,6 +77,8 @@ savePlotColl2D(
 \item{ggtheme}{a ggtheme object with additional style definitions; default NULL.}
 
 \item{imtype}{definition of the output image type, either "png" or "pdf".}
+
+\item{colpal}{colour palette for the main data, default 'RdYlBu'.}
 }
 \description{
 Save plots of collective events

@@ -27,5 +27,5 @@ Imports:
     OpenImageR,
     ggplot2,
     grDevices
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 VignetteBuilder: knitr

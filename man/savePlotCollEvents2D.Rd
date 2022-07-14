@@ -6,7 +6,7 @@
 \usage{
 savePlotCollEvents2D(
   inDTobj,
-  inDTcoll,
+  inDTcoll = NULL,
   inDTbin = NULL,
   inDTanno = NULL,
   inCols = list(frame = "frame", x = "x", y = "y", id = "trackID", clid = "clTrackID",
@@ -22,7 +22,8 @@ savePlotCollEvents2D(
   inPtSzBin = 1,
   inPtSzAnno = 2,
   inGGtheme = NULL,
-  inPlotType = c("png", "pdf")
+  inPlotType = c("png", "pdf"),
+  inColPal = "RdYlBu"
 )
 }
 \arguments{
@@ -59,12 +60,14 @@ savePlotCollEvents2D(
 \item{inGGtheme}{additional ggplot2 theme definitions, default NULL.}
 
 \item{inPlotType}{definition of the output image type, either "png" or "pdf".}
+
+\item{inColPal}{colour palette for the main data, default 'RdYlBu'.}
 }
 \value{
 does not return any value; saves a sequence of images to the specified folder.
 }
 \description{
-Save subsequent frames as PNG or PDF files with collective events overlaid as convex hull polygons
+Save subsequent frames as PNG or PDF files with optional collective events overlaid as convex hull polygons
 over the original data. Optionally, a binarised measurement can be plotted as black dots and
 arbitrary annotations as asterisks.
 }
